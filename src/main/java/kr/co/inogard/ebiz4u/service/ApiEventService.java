@@ -15,6 +15,6 @@ public class ApiEventService {
     private ApiEventRepository apiEventRepository;
 
     public List<ApiEvent> getApiEvents(){
-        return apiEventRepository.findAll(Sort.by(Sort.Direction.DESC, "regDt"));
+        return apiEventRepository.findAll(Sort.by(Sort.Direction.ASC, "regDt"));
     }
 }
