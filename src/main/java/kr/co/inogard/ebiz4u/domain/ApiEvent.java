@@ -1,6 +1,7 @@
 package kr.co.inogard.ebiz4u.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import kr.co.inogard.ebiz4u.common.constant.EvtIoType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,8 @@ public class ApiEvent {
   private String evtNo;
 
   @Column(name = "evt_io_type")
-  private String evtIoType;
+  @Enumerated(EnumType.STRING)
+  private EvtIoType evtIoType;
 
   @Column(name = "evt_cmd_param")
   private String evtCmdParam;

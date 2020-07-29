@@ -1,6 +1,7 @@
 package kr.co.inogard.ebiz4u.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import kr.co.inogard.ebiz4u.common.constant.SelectYN;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -53,13 +54,16 @@ public class TbUsercode {
   private String userTypecd;
 
   @Column(name = "admin_flag", columnDefinition = "char")
-  private String adminFlag;
+  @Enumerated(EnumType.STRING)
+  private SelectYN adminFlag;
 
   @Column(name = "access_flag", columnDefinition = "char")
-  private String accessFlag;
+  @Enumerated(EnumType.STRING)
+  private SelectYN accessFlag;
 
   @Column(name = "use_yn", columnDefinition = "char")
-  private String useYn;
+  @Enumerated(EnumType.STRING)
+  private SelectYN useYn;
 
   @Column(name = "aprvl_dt")
   private Timestamp aprvlDt;
@@ -67,8 +71,9 @@ public class TbUsercode {
   @Column(name = "last_dt")
   private Timestamp lastDt;
 
-  @Column(name = "dept_cd", columnDefinition = "char")
-  private String deptCd;
+  @OneToOne
+  @JoinColumn(name = "dept_cd", columnDefinition = "char")
+  private TbPurorgdept purorgdept;
 
   @Column(name = "grade_cd", columnDefinition = "char")
   private String gradeCd;
@@ -95,10 +100,12 @@ public class TbUsercode {
   private Timestamp certExpireDt;
 
   @Column(name = "sms_rcv_yn", columnDefinition = "char")
-  private String smsRcvYn;
+  @Enumerated(EnumType.STRING)
+  private SelectYN smsRcvYn;
 
   @Column(name = "email_rcv_yn", columnDefinition = "char")
-  private String emailRcvYn;
+  @Enumerated(EnumType.STRING)
+  private SelectYN emailRcvYn;
 
   @Column(name = "xi_sts", columnDefinition = "char")
   private String xiSts;
@@ -113,19 +120,24 @@ public class TbUsercode {
   private String userTelSt;
 
   @Column(name = "sms_notify", columnDefinition = "char")
-  private String smsNotify;
+  @Enumerated(EnumType.STRING)
+  private SelectYN smsNotify;
 
   @Column(name = "sms_result", columnDefinition = "char")
-  private String smsResult;
+  @Enumerated(EnumType.STRING)
+  private SelectYN smsResult;
 
   @Column(name = "sms_contract", columnDefinition = "char")
-  private String smsContract;
+  @Enumerated(EnumType.STRING)
+  private SelectYN smsContract;
 
   @Column(name = "sms_bill", columnDefinition = "char")
-  private String smsBill;
+  @Enumerated(EnumType.STRING)
+  private SelectYN smsBill;
 
   @Column(name = "del_yn", columnDefinition = "char")
-  private String delYn;
+  @Enumerated(EnumType.STRING)
+  private SelectYN delYn;
 
   @Column(name = "user_certtype", columnDefinition = "char")
   private String userCerttype;
@@ -167,7 +179,8 @@ public class TbUsercode {
   private String userbizTypecd;
 
   @Column(name = "sleep_accnt_yn")
-  private String sleepAccntYn;
+  @Enumerated(EnumType.STRING)
+  private SelectYN sleepAccntYn;
 
   @Column(name = "agreement_dt")
   private Timestamp agreementDt;
