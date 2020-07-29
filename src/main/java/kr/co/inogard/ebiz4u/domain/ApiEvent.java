@@ -1,14 +1,12 @@
 package kr.co.inogard.ebiz4u.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import java.sql.Timestamp;
 
@@ -51,11 +49,11 @@ public class ApiEvent {
   @Column(name = "rcv_dt")
   private Timestamp rcvDt;
 
-  @Column(name = "agt_cd")
-  private String agtCd;
+  @ManyToOne
+  @JoinColumn(name = "agt_cd")
+  private ApiAgent apiAgent;
 
   @Column(name = "sche_kind")
   private String scheKind;
-
 
 }
