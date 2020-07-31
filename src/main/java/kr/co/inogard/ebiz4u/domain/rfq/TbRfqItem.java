@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -83,5 +84,11 @@ public class TbRfqItem {
   @Column(name = "constr_period_rmrk")
   private String constrPeriodRmrk;
 
+  @OneToMany(fetch = FetchType.LAZY)
+  @JoinColumns({
+          @JoinColumn(name = "rfq_no"),
+          @JoinColumn(name = "rfq_seq")
+  })
+  private List<TbRfqService> rfqServices;
 
 }
