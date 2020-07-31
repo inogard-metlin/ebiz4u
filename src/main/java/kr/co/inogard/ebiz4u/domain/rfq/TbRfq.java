@@ -359,8 +359,8 @@ public class TbRfq {
     @Column(name = "not_bill_dt")
     private Timestamp notBillDt;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "rfq_no")
-    @OrderBy(clause = "rfqSeq")
+    @OrderBy(clause = "rfqSeq asc, prSeq desc")
     private List<TbRfqItem> rfqItems;
 }
