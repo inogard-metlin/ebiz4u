@@ -21,7 +21,7 @@ public class RfqService {
         return byId.get();
     }
 
-    public List<TbRfq> getRfqByOrgCd(String orgCd) {
-        return rfqRepository.findByOrgCd(orgCd);
-    }
+//    public List<TbRfq> getRfqByOrgCd(String orgCd) {
+//        return rfqRepository.findByOrgCd(orgCd);
+//    }
 }

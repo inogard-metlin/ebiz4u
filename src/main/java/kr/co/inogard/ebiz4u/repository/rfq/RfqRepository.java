@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface RfqRepository extends JpaRepository<TbRfq, String> {
-    List<TbRfq> findByOrgCd(String orgCd);
+//    List<TbRfq> findByOrgCd(String orgCd);
 }

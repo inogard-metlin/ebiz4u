@@ -24,9 +24,9 @@ public class RfqController {
         return rfqService.getRfqByRfqNo(rfqNo);
     }
 
-    @GetMapping("/org/{orgCd}")
-    public List<TbRfq> getRfqByOrgCd(@PathVariable String orgCd){
-        return rfqService.getRfqByOrgCd(orgCd);
-    }
+//    @GetMapping("/org/{orgCd}")
+//    public List<TbRfq> getRfqByOrgCd(@PathVariable String orgCd){
+//        return rfqService.getRfqByOrgCd(orgCd);
+//    }
 
 }
