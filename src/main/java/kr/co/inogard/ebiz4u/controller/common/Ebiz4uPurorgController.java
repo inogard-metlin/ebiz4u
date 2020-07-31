@@ -1,7 +1,7 @@
-package kr.co.inogard.ebiz4u.controller;
+package kr.co.inogard.ebiz4u.controller.common;
 
-import kr.co.inogard.ebiz4u.domain.TbPurorg;
-import kr.co.inogard.ebiz4u.service.Ebiz4uPurorgService;
+import kr.co.inogard.ebiz4u.domain.common.TbPurorg;
+import kr.co.inogard.ebiz4u.service.common.Ebiz4uPurorgService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

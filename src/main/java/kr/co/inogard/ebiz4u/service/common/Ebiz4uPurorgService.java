@@ -1,7 +1,7 @@
-package kr.co.inogard.ebiz4u.service;
+package kr.co.inogard.ebiz4u.service.common;
 
-import kr.co.inogard.ebiz4u.domain.TbPurorg;
-import kr.co.inogard.ebiz4u.repository.TbPurorgRepository;
+import kr.co.inogard.ebiz4u.domain.common.TbPurorg;
+import kr.co.inogard.ebiz4u.repository.common.TbPurorgRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

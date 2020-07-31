@@ -1,7 +1,7 @@
-package kr.co.inogard.ebiz4u.repository;
+package kr.co.inogard.ebiz4u.repository.apiagent;
 
-import kr.co.inogard.ebiz4u.domain.ApiPrmap;
-import kr.co.inogard.ebiz4u.domain.ApiPrmapId;
+import kr.co.inogard.ebiz4u.domain.apiagent.ApiPrmap;
+import kr.co.inogard.ebiz4u.domain.apiagent.ApiPrmapId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

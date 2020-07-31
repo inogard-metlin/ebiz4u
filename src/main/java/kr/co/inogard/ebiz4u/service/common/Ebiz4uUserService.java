@@ -1,9 +1,9 @@
-package kr.co.inogard.ebiz4u.service;
+package kr.co.inogard.ebiz4u.service.common;
 
-import kr.co.inogard.ebiz4u.domain.TbCuscode;
-import kr.co.inogard.ebiz4u.domain.TbUsercode;
-import kr.co.inogard.ebiz4u.repository.TbCuscodeRepository;
-import kr.co.inogard.ebiz4u.repository.TbUsercodeRepository;
+import kr.co.inogard.ebiz4u.domain.common.TbCuscode;
+import kr.co.inogard.ebiz4u.domain.common.TbUsercode;
+import kr.co.inogard.ebiz4u.repository.common.TbCuscodeRepository;
+import kr.co.inogard.ebiz4u.repository.common.TbUsercodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package kr.co.inogard.ebiz4u.domain;
+package kr.co.inogard.ebiz4u.domain.apiagent;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,32 +1,26 @@
-package kr.co.inogard.ebiz4u.controller;
+package kr.co.inogard.ebiz4u.controller.apiagent;
 
-import kr.co.inogard.ebiz4u.common.constant.EvtIoType;
-import kr.co.inogard.ebiz4u.domain.ApiAgent;
-import kr.co.inogard.ebiz4u.domain.ApiEvent;
-import kr.co.inogard.ebiz4u.domain.ApiPrmap;
-import kr.co.inogard.ebiz4u.domain.ApiPrmapId;
-import kr.co.inogard.ebiz4u.service.ApiAgentService;
-import kr.co.inogard.ebiz4u.service.ApiEventService;
-import kr.co.inogard.ebiz4u.service.ApiPrmapService;
-import org.springframework.beans.factory.annotation.Autowired;
+import kr.co.inogard.ebiz4u.domain.apiagent.ApiAgent;
+import kr.co.inogard.ebiz4u.domain.apiagent.ApiEvent;
+import kr.co.inogard.ebiz4u.domain.apiagent.ApiPrmap;
+import kr.co.inogard.ebiz4u.domain.apiagent.ApiPrmapId;
+import kr.co.inogard.ebiz4u.service.apiagent.ApiAgentService;
+import kr.co.inogard.ebiz4u.service.apiagent.ApiEventService;
+import kr.co.inogard.ebiz4u.service.apiagent.ApiPrmapService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class AgentApiController {
 
-    @Autowired
-    private ApiAgentService apiAgentService;
-
-    @Autowired
-    private ApiEventService apiEventService;
-
-    @Autowired
-    private ApiPrmapService apiPrmapService;
+    private final ApiAgentService apiAgentService;
+    private final ApiEventService apiEventService;
+    private final ApiPrmapService apiPrmapService;
 
     @GetMapping("/enioapi/apiagents")
     public List<ApiAgent> getApiAgents(){

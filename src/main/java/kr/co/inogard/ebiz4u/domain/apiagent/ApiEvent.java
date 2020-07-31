@@ -1,6 +1,5 @@
-package kr.co.inogard.ebiz4u.domain;
+package kr.co.inogard.ebiz4u.domain.apiagent;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import kr.co.inogard.ebiz4u.common.constant.EvtIoType;
 import lombok.Data;
 import lombok.NoArgsConstructor;

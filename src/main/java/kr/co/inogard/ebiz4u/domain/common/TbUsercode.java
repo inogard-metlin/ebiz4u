@@ -1,4 +1,4 @@
-package kr.co.inogard.ebiz4u.domain;
+package kr.co.inogard.ebiz4u.domain.common;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import kr.co.inogard.ebiz4u.common.constant.SelectYN;

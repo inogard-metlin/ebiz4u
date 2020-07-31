@@ -1,7 +1,7 @@
-package kr.co.inogard.ebiz4u.service;
+package kr.co.inogard.ebiz4u.service.apiagent;
 
-import kr.co.inogard.ebiz4u.domain.ApiEvent;
-import kr.co.inogard.ebiz4u.repository.ApiEventRepository;
+import kr.co.inogard.ebiz4u.domain.apiagent.ApiEvent;
+import kr.co.inogard.ebiz4u.repository.apiagent.ApiEventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
