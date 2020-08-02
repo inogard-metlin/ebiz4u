@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TbUsercodeRepository extends JpaRepository<TbUsercode, String> {
     TbUsercode findByLoginId(String loginId);
+
+    TbUsercode findByUserCd(String userCd);
 }

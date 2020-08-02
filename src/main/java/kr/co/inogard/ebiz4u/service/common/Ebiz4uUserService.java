@@ -25,4 +25,8 @@ public class Ebiz4uUserService {
     public TbUsercode getUsercodeByLoginId(String loginId) {
         return tbUsercodeRepository.findByLoginId(loginId);
     }
+
+    public TbUsercode getUsercodeByUserCd(String userCd) {
+        return tbUsercodeRepository.findByUserCd(userCd);
+    }
 }

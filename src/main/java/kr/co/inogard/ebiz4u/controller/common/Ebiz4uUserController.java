@@ -21,9 +21,14 @@ public class Ebiz4uUserController {
         return ebiz4uUserService.getCusCodes();
     }
 
-    @GetMapping("/user/usercodes/{loginId}")
+    @GetMapping("/user/usercodes/ids/{loginId}")
     public TbUsercode getUsercodeByLoginId(@PathVariable String loginId){
         return ebiz4uUserService.getUsercodeByLoginId(loginId);
+    }
+
+    @GetMapping("/user/usercodes/cds/{userCd}")
+    public TbUsercode getUsercodeByUserCd(@PathVariable String userCd){
+        return ebiz4uUserService.getUsercodeByUserCd(userCd);
     }
 
 }

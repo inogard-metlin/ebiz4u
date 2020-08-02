@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 
@@ -73,6 +75,7 @@ public class TbUsercode {
 
   @OneToOne
   @JoinColumn(name = "dept_cd", columnDefinition = "char")
+  @NotFound(action = NotFoundAction.IGNORE)
   private TbPurorgdept purorgdept;
 
   @Column(name = "grade_cd", columnDefinition = "char")

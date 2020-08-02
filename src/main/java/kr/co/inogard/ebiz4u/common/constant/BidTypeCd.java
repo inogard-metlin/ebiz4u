@@ -6,7 +6,7 @@ import lombok.Getter;
 // 입찰종류2
 @Getter
 @AllArgsConstructor
-public enum BidTypecd {
+public enum BidTypeCd {
     // BidSubTypecd.견적
     일반견적("1"),
     지명견적("8"),

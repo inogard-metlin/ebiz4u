@@ -14,6 +14,8 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.annotations.OrderBy;
 
 @Data
@@ -35,17 +37,17 @@ public class TbRfq {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "pr_typecd", columnDefinition = "char", length = 1)
-    private PrTypecd prTypecd;
+    private PrTypeCd prTypeCd;
 
     @Column(name = "rfq_typecd", columnDefinition = "char", length = 1)
     @Enumerated(EnumType.STRING)
     private RfqTypeCd rfqTypeCd;
 
     @Column(name = "bid_typecd", columnDefinition = "char", length = 1)
-    private String bidTypecd;
+    private String bidTypeCd;
 
     @Column(name = "bid_sub_typecd", columnDefinition = "char", length = 1)
-    private String bidSubTypecd;
+    private String bidSubTypeCd;
 
     @Column(name = "pay_cond_rmrk")
     private String payCondRmrk;
@@ -129,6 +131,7 @@ public class TbRfq {
     @ManyToOne
     @JoinColumn(name = "chrg_usrcd", columnDefinition = "char")
     @JsonIgnoreProperties({"tbPurorg", "tbCuscode"})
+    @NotFound(action = NotFoundAction.IGNORE)
     private TbUsercode chrgUsrcd;
 
     @Column(name = "dlv_cond_rmrk")
@@ -147,6 +150,7 @@ public class TbRfq {
     @ManyToOne
     @JoinColumn(name = "reg_usrcd", columnDefinition = "char")
     @JsonIgnoreProperties({"tbPurorg", "tbCuscode"})
+    @NotFound(action = NotFoundAction.IGNORE)
     private TbUsercode regUsrcd;
 
     @Column(name = "reg_dt")

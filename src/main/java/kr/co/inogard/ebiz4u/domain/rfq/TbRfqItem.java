@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import org.hibernate.annotations.OrderBy;
 
 import javax.persistence.*;
 import java.util.List;
@@ -89,6 +90,7 @@ public class TbRfqItem {
           @JoinColumn(name = "rfq_no"),
           @JoinColumn(name = "rfq_seq")
   })
+  @OrderBy(clause = "rfqSrvSeq asc")
   private List<TbRfqService> rfqServices;
 
 }
