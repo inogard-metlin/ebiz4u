@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>이비즈포유 사용자</title>
+</head>
+<body>
+    <h1>사용자 정보</h1>
+    <hr>
+    <div th:object="${tbUser}">
+        <span th:text="'유저코드: ' + *{userCd}">userCd</span><br>
+        <span th:text="|이름: *{userNm}|">userNm</span><br>
+        <span th:text="|모바일: *{userSms}|">userSMS</span><br>
+        <span th:text="|이메일: *{userEmail}|">userEmail</span><br>
+        <span th:text="|등록일자: *{regDt}|">regDt</span><br>
+        <span th:text="|등록일자: *{#dates.format(regDt, 'yyyy-MM-dd HH:mm:ss')}|">regDt</span><br>
+        <span th:text="|부서코드: *{purorgdept.deptCd}|">deptCd</span><br>
+    </div>
+</body>
+</html>

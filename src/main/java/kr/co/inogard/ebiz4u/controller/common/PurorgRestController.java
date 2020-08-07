@@ -1,7 +1,7 @@
 package kr.co.inogard.ebiz4u.controller.common;
 
 import kr.co.inogard.ebiz4u.domain.common.TbPurorg;
-import kr.co.inogard.ebiz4u.service.common.Ebiz4uPurorgService;
+import kr.co.inogard.ebiz4u.service.common.PurorgService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class Ebiz4uPurorgController {
+public class PurorgRestController {
 
     @Autowired
-    private Ebiz4uPurorgService ebiz4uPurorgService;
+    private PurorgService ebiz4uPurorgService;
 
     @GetMapping("/org/purorgs")
     public List<TbPurorg> getPurorgs(){

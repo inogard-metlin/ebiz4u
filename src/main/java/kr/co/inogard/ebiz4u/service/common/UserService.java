@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class Ebiz4uUserService {
+public class UserService {
     @Autowired
     private TbCuscodeRepository tbCuscodeRepository;
 

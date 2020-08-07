@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class Ebiz4uPurorgService {
+public class PurorgService {
     @Autowired
     private TbPurorgRepository tbPurorgRepository;
 

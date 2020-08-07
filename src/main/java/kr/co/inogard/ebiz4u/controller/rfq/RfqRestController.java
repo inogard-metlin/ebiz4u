@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/rfqs")
-public class RfqController {
+public class RfqRestController {
 
     private final RfqService rfqService;
 

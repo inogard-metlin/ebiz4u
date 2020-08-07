@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ApiAgent</title>
+</head>
+<body>
+    <h1>ApiAgent</h1>
+    <hr>
+    <p th:text="|카운트 : ${#lists.size(apiAgents)}|"></p>
+    <table>
+        <thead>
+            <tr>
+                <th>agt_cd</th>
+                <th>licence_key</th>
+                <th>agt_conn_url</th>
+                <th>intall_org_nm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="apiAgent : ${apiAgents}">
+                <td th:text="${apiAgent.getAgtCd()}">대학교코드</td>
+                <td th:text="${apiAgent.getLicenceKey()}">라이센스코드</td>
+                <td th:text="${apiAgent.getAgtConnUrl()}">Agent URL</td>
+                <td th:text="${apiAgent.getInstallOrgNm()}">담당부서</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

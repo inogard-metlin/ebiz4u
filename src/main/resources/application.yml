@@ -23,5 +23,9 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     check-template-location: true
-    mode: HTML5
+    mode: HTML
     cache: false
+
+  messages:
+    basename: messages
+
